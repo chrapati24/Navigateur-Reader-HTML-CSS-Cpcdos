@@ -1,12 +1,16 @@
 ;Build litehtml
--c litehtml/ -o obj/cpp_{_sPlatform}_{_sOpt}/  -std=c++14
+-c litehtml/ -o obj/cpp_{_sPlatform}_{_sOpt}/litehtml/  -std=c++14 
 >
 ;Build gumbo
--c gumbo/ -o obj/cpp_{_sPlatform}_{_sOpt}/gumbo/  
->
+-c gumbo/ -o obj/cpp_{_sPlatform}_{_sOpt}/gumbo/ -fpermissive
+;>
 ;Build container
 ;-c containers/win32/ -o obj/cpp_{_sPlatform}_{_sOpt}/win32/ -std=c++14
 ;-I include/ -I src/
+>
+;Current example
+-c src/ -o obj/cpp_{_sPlatform}_{_sOpt}/ -std=c++14
+-I include/ -I litehtml/ -I src/
 >
 ;Generate executable
 -o obj/cpp_{_sPlatform}_{_sOpt}/ -#To _out/{_sPlatform}_{_sOpt}/App.* 

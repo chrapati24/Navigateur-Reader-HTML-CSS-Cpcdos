@@ -2,7 +2,7 @@
 -c litehtml/ -o obj/cpp_{_sPlatform}_{_sOpt}/litehtml/  -std=c++14 
 >
 ;Build gumbo
--c gumbo/ -o obj/cpp_{_sPlatform}_{_sOpt}/gumbo/ -fpermissive
+-c gumbo/ -o obj/cpp_{_sPlatform}_{_sOpt}/gumbo/
 ;>
 ;Build container
 ;-c containers/win32/ -o obj/cpp_{_sPlatform}_{_sOpt}/win32/ -std=c++14
@@ -10,7 +10,7 @@
 >
 ;Current example
 -c src/ -o obj/cpp_{_sPlatform}_{_sOpt}/ -std=c++14
--I include/ -I litehtml/ -I src/
+-I include/ -I src/
 >
 ;Generate executable
--o obj/cpp_{_sPlatform}_{_sOpt}/ -#To _out/{_sPlatform}_{_sOpt}/App.* 
+-o obj/cpp_{_sPlatform}_{_sOpt}/ -#To _out/{_sPlatform}_{_sOpt}/App.*  -{vPreloadRc}
